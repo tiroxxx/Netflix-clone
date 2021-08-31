@@ -1,5 +1,6 @@
 import './App.css';
 import Row from './components/row/Row';
+import Banner from "./components/banner/Banner"
 import requests from './request';
 
 function App() {
