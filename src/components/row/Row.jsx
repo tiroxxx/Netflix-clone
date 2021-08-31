@@ -11,7 +11,7 @@ export default function Row({ title, fetchUrl, isLargeRow }) {
 
   const opts = {
     height: '390',
-    width: '640',
+    width: '100%',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -52,7 +52,7 @@ export default function Row({ title, fetchUrl, isLargeRow }) {
             src={`${base_url}${
               isLargeRow ? movie.poster_path : movie.backdrop_path
             }`}
-            alt={movie.name}
+            alt={movie?.title || movie?.name || movie?.original_name}
           />
         ))}
       </div>
